@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+
+<html>
+    
+    <head>
+        
+        <link rel="shortcut icon" type="image/x-icon" href="favicon.ico">
+        <title>Google</title>
+        <link rel="stylesheet" type="text/css" href="stylesheets/classic.css">
+
+        <small><p style="color:#929f99">version 0.21</p></small>
+
+    </head>
+    <script>
+        function Loaded(){
+                setTimeout(MainLoop,20)
+                //alert("Hey")
+                // Get a handle to the canvas object
+                canvas = document.getElementById('testy');
+                // Get the 2d context for this canvas
+
+                context = canvas.getContext('2d');
+                
+                // Our drawing code here. . . 
+                //context.beginPath()
+                //context.arc(0,0,80,80,45,false)//x,y,radius startangle, endangle, clockwise?
+                //context.stroke()
+
+                //context.fillText("You won or lost, idk",canvas.width/2,canvas.height/2)
+                squarex = 0
+                squarey = 0
+                context.fillStyle = 'rgb(75, 83, 116)';
+                //context.fillRect(squarex,squarey,5,5)
+                
+               
+            }
+    
+         function DrawLoop(){
+                context.fillRect(squarex,squarey,5,5)
+             
+                squarex += 5
+                
+
+                }
+        function MainLoop(){
+            setTimeout(DrawLoop,20)
+            setTimeout(MainLoop,20)
+            
+        }
+            
+    </script>
+        
+            
+
+                    
+  
+
+    <body onload="Loaded()">
+        <canvas width = "640" height = "480" id = "testy" style = "border:black 1px solid;">
+            Your browser does not support game. Please shift to another browser.
+        </canvas>
+        
+        
+        <br> 
+        <a href="/maxb/deep.html">
+            <img src="pictures/skelly.gif">
+        </a>
+    </body>
+</html> 
