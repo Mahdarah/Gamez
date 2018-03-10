@@ -6,7 +6,7 @@
         
         <link rel="shortcut icon" type="image/x-icon" href="favicon.ico">
         <title>Google</title>
-        <link rel="stylesheet" type="text/css" href="stylesheets/classic.css">
+        <link rel="stylesheet" type="text/css" href="stylesheet .css">
 
         <small><p style="color:#929f99">version 0.21</p></small>
 
@@ -21,6 +21,8 @@
 
                 context = canvas.getContext('2d');
                 
+                width = canvas.width
+                height = canvas.height
                 // Our drawing code here. . . 
                 //context.beginPath()
                 //context.arc(0,0,80,80,45,false)//x,y,radius startangle, endangle, clockwise?
@@ -36,8 +38,8 @@
             }
     
          function DrawLoop(){
-                context.fillRect(squarex,squarey,10,10)
-             
+                context.fillRect(squarex,squarey,5,5)
+                
                 squarex += 5
                 
 
@@ -45,7 +47,6 @@
         function MainLoop(){
             setTimeout(DrawLoop,20)
             setTimeout(MainLoop,20)
-            
         }
             
     </script>
@@ -56,10 +57,7 @@
   
 
     <body onload="Loaded()">
-        <canvas width = "900" height = "900" id = "testy" style = "border:black 1px solid;">
-            Your browser does not support game. Please shift to another browser.
-        </canvas>
-         <canvas width = "640" height = "480" id = "testy" style = "border:black 1px solid;">
+        <canvas width = "450" height = "450" id = "testy" style = "border:black 1px solid;">
             Your browser does not support game. Please shift to another browser.
         </canvas>
         
