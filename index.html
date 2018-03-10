@@ -67,29 +67,51 @@
 
                             $(document).keypress(function(event){
                                 player2 = String.fromCharCode(event.which); 
-                               // if (player2==player1) {
-                               //     delete player2;     
-                                //}
+                               
                             });
 
                                 if (player2 && numplayers >= 3) {
-                                     topcontext.font = "40px Georgia";
+                                     topcontext.font = "35px Georgia";
                                     context.clearRect(0,0,450,450)
                                 topcontext.fillText("Player three choose a key", 10, 50);
 
 
                                 $(document).keypress(function(event){
-                                    player2 = String.fromCharCode(event.which); 
-                                    if (player3==player2 || player3 == player1) {
-                                        delete player2;     
-                                    }
+                                    player3 = String.fromCharCode(event.which); 
+                                    
                                 });
                             
-                                } 
+                                    if (player3 && numplayers >= 4) {
+                                        
+                                     topcontext.font = "40px Georgia";
+                                    context.clearRect(0,0,450,450)
+                                topcontext.fillText("Player four choose a key", 10, 50);
+
+
+                                $(document).keypress(function(event){
+                                    player4 = String.fromCharCode(event.which); 
+                                    
+                                });
+                                        
+                                    if (player4) {
+                                        numplayers =0
+                                        
+                                    }
+                                    }else {
+                                        numplayers=0
+                                    }
+                                    
+                                } else {
+                                        numplayers=0
+                                    }
                             
                             
-                        }
-                    }
+                        } else {
+                                        numplayers=0
+                                    }
+                    }else {
+                                        numplayers=0
+                                    }
                 }
              
                 
@@ -121,7 +143,7 @@
             
             document.addEventListener('keydown', function(event) {
             if(event.keyCode == 49) {
-                    if(title){
+                    if(title){ 
                         numplayers = 1
                     }
             }
